@@ -1,0 +1,24 @@
+body a{
+    color: green;
+}
+
+.link_group{
+    color: red;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+.new::after{
+    content: "- NEW";
+    color: yellow;
+}
+
+.hover:hover{
+    font-style: italic;
+}
