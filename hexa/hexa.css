@@ -1,0 +1,36 @@
+.inner-container {
+    border: 1px solid green;
+    padding: 15px;
+ }
+
+ .left-side{
+    text-align: center;
+ }
+
+ .inner-container .profile{
+    width: 70%;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    border: 5px solid white;
+    margin-bottom: 20px;
+ }
+
+.inner-container.right-side form{
+    display: flex;
+    height: 100px;  
+}
+
+
+.inner-container.right-side form textarea{
+    width: 85%;
+    border: 0;
+    padding: 10px;
+    resize: none;
+    outline-color:green ;
+}
+
+.inner-container.right-side form button{
+    width: 15%;
+    border: 0;
+}
