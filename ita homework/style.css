@@ -1,0 +1,306 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.navbar{
+    padding: 20px 0;
+}
+
+.nav_list{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hamburger{
+  position: relative;
+  display: none;
+  width: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 100;
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before{  
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before{
+  transform: rotate(-45deg) translate(-8px,6px);
+}
+
+.hamburger.is-active:after{
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar{
+  opacity: 0;
+
+}
+
+.nav_list a{
+    color: black;
+    transition: 1s;
+}
+
+.nav_list a:hover{
+    text-decoration: none;
+    color: gray;
+}
+
+.mobile-nav{
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  padding-top:120px ;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active{
+  left: 0;
+}
+
+
+
+.mobile-nav a{
+  display: block;
+  margin: 0 auto 16px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  padding:12px 16px;
+  background-color: aliceblue;
+  color: #749efa;
+  text-decoration: none;
+}
+
+.hero{
+    padding: 200px 0;
+    background-image: url("./imgs/hero.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero h1{
+    background-color: #2ec286;
+    color: #fff;
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 110px;
+}
+
+.about{
+    padding: 100px 0;
+}
+
+.about .wrapper img{
+    margin: auto;
+    padding: 30px 0;
+}
+
+.about .wrapper h3{
+    margin-bottom: 30px;
+}
+
+.portfolio{
+    padding: 100px 0;
+}
+
+.portfolio h3{
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.blog .blog-post h3{
+  font-size: 20px;
+  padding: 15px 0;
+}
+
+.blog .blog-post p{
+  padding: 20px 0;
+}
+
+footer{
+  padding: 50px 0 0 0;
+  background-color: rgb(20, 20, 20);
+  color: white;
+} 
+
+footer ul{
+  padding: 0;
+}
+footer li{
+  list-style: none;
+  color: gray;
+  border-bottom: 1px solid gray;
+}
+
+footer .ita{
+  margin-top: 50px;
+  background-color: black;
+  text-align: center;
+  padding: 20px 0;
+  color: gray;
+}
+
+/* ==========RESPONSIVE======== */
+
+@media screen and (max-width:320px) {
+  .nav_list{
+    display: none;
+  }
+
+  .mobile{
+    display: flex;
+    justify-content: end;
+  }
+
+
+  .hamburger{
+    display: block;
+  }
+
+  .portfolio h3{
+    font-size: 16px;
+  } 
+
+
+
+}
+
+@media screen and (max-width:375px) {
+  .nav_list{
+    display: none;
+  }
+
+  .mobile{
+    display: flex;
+    justify-content: end;
+  }
+
+  .hamburger{
+    display: block;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .nav_list{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+    justify-content: end;
+  }
+
+
+  .hamburger{
+    display: block;
+  }
+}
+
+@media screen and (max-width:768px) {
+
+  .nav_list{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+    justify-content: end;
+  }
+
+
+  .hamburger{
+    display: block;
+  }
+  .portfolio .bike {
+    display: flex;
+    justify-content: center;
+  }
+}
+
